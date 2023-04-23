@@ -1,0 +1,25 @@
+.discount {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  padding: 0 1rem;
+  width: auto;
+  height: 50px;
+  background: linear-gradient(125.17deg, rgb(29, 32, 33) 0%, rgb(14, 13, 23) 100%);
+  border-radius: 12px;
+}
+
+.percent {
+  width: 30px;
+  height: 30px;
+}
+
+.discount-text {
+  font-size: 20px;
+  color:#b8b4b4
+}
+
+.text-highlight {
+  color:#E8E6E3;
+}
