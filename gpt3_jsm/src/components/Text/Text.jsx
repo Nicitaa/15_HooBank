@@ -1,12 +1,10 @@
 import './text.css'
 
-export function Text () {
+export function Text ({subtitle,title}) {
 return (
-<>
-<h1>The Next <span className="text-gradient">Generation</span> Payment method.</h1>
-<p>Our team of experts uses a methodology 
-  to identify the credit cards most likely 
-  to fit your needs. We examine annual percentage rates, annual fees.</p>
-</>
+<div className='text'>
+<div className="title inline-flex flex-row gap-1">{title}</div>
+<div className="subtitle inline-flex flex-row gap-1">{subtitle}</div>
+</div>
 )
 }

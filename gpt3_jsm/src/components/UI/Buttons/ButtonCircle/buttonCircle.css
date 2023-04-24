@@ -1,0 +1,27 @@
+.button-circle {
+  border-radius: 50%;
+  padding: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgb(13, 73, 75), rgb(38, 176, 197)),
+  linear-gradient(220deg, #fff, #fff);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px rgba(0, 3, 12,1) inset;
+ 
+  height: 120px;
+  width: 120px;
+  padding: 1rem;
+
+
+  }
+
+.button-circle a {
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, rgb(10, 62, 64) 0.89%, rgb(13, 81, 83) 17.23%, rgb(16, 100, 103) 42.04%, rgb(19, 118, 122) 55.12%, rgb(22, 138, 142) 71.54%, rgb(39, 148, 164) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

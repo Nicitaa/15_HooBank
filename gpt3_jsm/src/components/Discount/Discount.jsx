@@ -1,8 +1,8 @@
 import './discount.css'
 
-export function Discount () {
+export function Discount ({classNameParam}) {
 return (
-    <div className="discount">
+    <div className={`discount ${classNameParam}`}>
     <svg className='percent'>
         <use xlinkHref="./sprite.svg#percent" />
     </svg>

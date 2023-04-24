@@ -5,7 +5,7 @@ import { Home } from './pages'
 
 const App = () => {
   return (
-    <div className="px-16">
+    <div className="container px-16">
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
