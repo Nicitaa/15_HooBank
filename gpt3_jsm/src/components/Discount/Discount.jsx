@@ -1,17 +1,14 @@
 import './discount.css'
 
-export function Discount ({classNameParam}) {
+export function Discount ({discountClass,svgUrl,discountTitle}) {
 return (
-    <div className={`discount ${classNameParam}`}>
+    <div className={`discount-container ${discountClass}`}>
     <svg className='percent'>
-        <use xlinkHref="./sprite.svg#percent" />
+        <use xlinkHref={svgUrl} />
     </svg>
-    <p className='discount-text'>
-        <span className='text-highlight'>20% </span>
-        Discount For{" "}
-        <span className='text-highlight'>1 Months </span>
-        Account
-    </p>
+    <div className='discount-title'>
+        {discountTitle}
+    </div>
     </div>
 
 )

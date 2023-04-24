@@ -1,11 +1,13 @@
-.title {
-  color:rgb(232, 230, 227);
-  font-weight: 600;
-  margin-bottom: 2rem;
+.text-container {
+  max-width: 50%;
 }
 
-.subtitle {
-  color: rgba(232, 230, 227, 0.7);
+.text-title {
+  font-size: 54px;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.text-subTitle {
   font-size: 20px;
 }
-

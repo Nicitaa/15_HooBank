@@ -14,3 +14,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.title {
+  color:rgb(232, 230, 227);
+}
+
+.subTitle {
+  color: rgba(232, 230, 227, 0.7);
+}
+

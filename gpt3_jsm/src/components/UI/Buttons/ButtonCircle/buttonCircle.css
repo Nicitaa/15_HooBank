@@ -1,4 +1,4 @@
-.button-circle {
+.button-circle-container {
   border-radius: 50%;
   padding: 1.4rem;
   display: flex;
@@ -14,10 +14,10 @@
   width: 120px;
   padding: 1rem;
 
-
   }
 
-.button-circle a {
+.button-circle-title {
+  position: relative;
   text-align: start;
   font-size: 1.2rem;
   font-weight: 600;

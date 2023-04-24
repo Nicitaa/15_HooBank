@@ -1,9 +1,9 @@
 import './image.css'
 
-export function Image ({imgUrl,classNameParam}) {
+export function Image ({imgUrl,imageClass}) {
 return (
  
-  <img class={`image ${classNameParam}`} src={imgUrl}/>
+  <img className={`image-container ${imageClass}`} src={imgUrl}/>
 
 )
 }

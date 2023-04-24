@@ -1,4 +1,4 @@
-.discount {
+.discount-container {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +11,11 @@
 }
 
 .percent {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
-.discount-text {
+.discount-title {
   font-size: 20px;
   color:#b8b4b4
 }
