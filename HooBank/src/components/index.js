@@ -15,7 +15,13 @@ export {Image} from './Image/Image'
 export {ButtonCircle} from './UI/Buttons/ButtonCircle/ButtonCircle'
 
 /* Feature1 section - ButtonDefault component */
-// export {ButtonDefault} from './UI/Buttons/ButtonDefault/ButtonDefault'
+export {ButtonDefault} from './UI/Buttons/ButtonDefault/ButtonDefault'
+
+/* Feature1 section - ButtonDefault component */
+export {Modal} from './Modal/Modal'
+
+/* Error component */
+export {Error} from './Error/Error'
 
 /* Numbers section - Number component */
 export {Number} from './Number/Number'

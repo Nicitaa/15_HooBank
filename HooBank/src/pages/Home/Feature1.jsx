@@ -1,12 +1,23 @@
-import { Text,Feature } from "../../components"
+import { Text,Feature,ButtonDefault } from "../../components"
 
 
 export function Feature1 () {
 return (
 <section className="py-4 mb-32 flex">
-
   
-  <Text title={
+
+
+
+  {/* Make 1 universal component fact that I have feature 1 2 3 etc - this it is is not is okay */}
+
+
+
+
+
+
+  <div className="flex flex-col max-w-xl">
+  <Text textClass={'mb-6'}
+   title={
     <h1>You do the business,
     we will handle the money.</h1>}
     subtitle={
@@ -16,7 +27,17 @@ return (
         But with hundreds of credit cards on the market.</p>
     }
   />
- 
+  <div className="flex gap-4">
+  <ButtonDefault html='https://github.com/Nicitaa' buttonDefaultTitle={<h1>My github</h1>}>
+  <svg className='w-6 h-6'>
+        <use xlinkHref="./sprite.svg#github" />
+      </svg>
+  </ButtonDefault>
+  <ButtonDefault html='https://github.com/Nicitaa' buttonDefaultTitle={<h1>Pop-up</h1>}/>
+  </div>
+  
+  </div>
+    
  
 
   <div className="flex flex-col gap-4">
@@ -36,3 +57,4 @@ return (
 </section>
 )
 }
+

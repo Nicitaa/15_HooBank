@@ -1,11 +1,12 @@
 .text-container {
-  max-width: 50%;
+  display: flex;
+  flex-flow: column;
 }
 
 .text-title {
   font-size: 54px;
   font-weight: 600;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .text-subTitle {
