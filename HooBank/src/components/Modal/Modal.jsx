@@ -1,33 +1,39 @@
-import { useEffect, useState } from "react"
+import { useContext, useState } from "react";
 import {userActive,trustedByCompany,transaction} from './../../pages/Home/Numbers'
 import { Error } from "../../components"
-
+import { shitContext } from "./../../pages/Home/Home";
 
 //let react somehow understand that I change data to change it in Numbers
 
 export function Modal ({modalTitle}) {
+  const { setContextState } = useContext(shitContext);
   const [inputUserActive,setInputUserActive] = useState('')
   const [inputTrustedByCompany,setInputTrustedByCompany] = useState('')
   const [inputTransaction,setInputTransaction] = useState('')
   
   const changeNumbersHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+
     if (userActive.length === 0) {
-      console.log('enter user active')
-      return <Error errorTitle={'Enter user active'}/>
-    }
-    if (trustedByCompany.length === 0) {
-      return <Error errorTitle={'Enter trusted by company'}/>
-    }
-    if (transaction.length === 0) {
-      return <Error errorTitle={'Enter transaction'}/>
-    }
-    userActive = inputUserActive
-    trustedByCompany = inputTrustedByCompany
-    transaction = inputTransaction
-    console.log(userActive,trustedByCompany,transaction)
-    console.log(inputUserActive,inputTrustedByCompany,inputTransaction)
-  }
+          console.log('enter user active')
+          return <Error errorTitle={'Enter user active'}/>
+        }
+        if (trustedByCompany.length === 0) {
+          return <Error errorTitle={'Enter trusted by company'}/>
+        }
+        if (transaction.length === 0) {
+          return <Error errorTitle={'Enter transaction'}/>
+        }
+        
+    setContextState({ userActive: inputUserActive });
+    console.log("Modal - newUserActive changed");
+  };
+
+
+
+
+
+  
 
 return (
 <div className="fixed bg-black/[0.6] top-0 right-0 left-0 bottom-0">
