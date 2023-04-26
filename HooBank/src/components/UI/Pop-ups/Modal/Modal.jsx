@@ -1,46 +1,57 @@
 import { useContext, useState } from "react";
-import { Error } from ".."
-import { NumbersContext } from "../../context/NumbersContext";
+import { NumbersContext } from "../../../../context/NumbersContext";
+import { Message } from "../Message/Message";
 
 export function Modal ({modalTitle}) {
   //context for changing numbers
   const { setNumbers,number } = useContext(NumbersContext);
   //states for error
-  const [errorTitle,setErrorTitle] = useState('')
-  const [errorSubTitle,setErrorSubTitle] = useState('')
-  const [showError,setShowError] = useState(false)
+  const [showMessage,setShowMessage] = useState(false)
+  const [messageType,setMessageType] = useState('')
+  const [messageTitle,setMessageTitle] = useState('')
+  const [messageSubTitle,setMessageSubTitle] = useState('')
   //values in inputs
   const [inputUserActive,setInputUserActive] = useState('')
   const [inputTrustedByCompany,setInputTrustedByCompany] = useState('')
   const [inputTransaction,setInputTransaction] = useState('')
   const changeNumbersHandler = (e) => {
     e.preventDefault();
-    
+    function wait() {
+      setTimeout(() => setShowMessage(false),5000)
+    }
+    setShowMessage(true)
     if (inputUserActive.length === 0) {
-          setShowError(true)
-          setErrorTitle('Enter user active')
-          setErrorSubTitle('Common reason for it you not fill user active field')
-          setTimeout(() => setShowError(false),5000)
+
+          setMessageType('error')
+          setMessageTitle('Enter user active')
+          setMessageSubTitle('Common reason for it you not fill user active field')
+          wait()
         }
         else if (inputTrustedByCompany.length === 0) {
-          setShowError(true)
-          setErrorTitle('Enter trusted by company')
-          setErrorSubTitle('Common reason for it you not fill trusted by company field')
-          setTimeout(() => setShowError(false),5000)
+          setMessageType('error')
+          setMessageTitle('Enter trusted by company')
+          setMessageSubTitle('Common reason for it you not fill trusted by company field')
+          wait()
         }
         else if (inputTransaction.length === 0) {
-          setShowError(true)
-          setErrorTitle('Enter transaction')
-          setErrorSubTitle('Common reason for it you not fill transaction field')
-          setTimeout(() => setShowError(false),5000)
+          setMessageType('error')
+          setMessageTitle('Enter transaction')
+          setMessageSubTitle('Common reason for it you not fill transaction field')
+          wait()
         }
         else {
+          setMessageType('success')
+          setMessageTitle('data changed')
+          setMessageSubTitle('Enjoy!')
+          wait()
           
         }
+
       setNumbers({
       userActive: inputUserActive,
       trustedByCompany:inputTrustedByCompany,
-      transaction:inputTransaction });
+      transaction:inputTransaction});
+      
   };
 
 
@@ -69,7 +80,7 @@ return (
      Contrast</button>
     </div>
   </form>
-  {showError && <Error errorTitle={errorTitle} errorSubTitle={errorSubTitle}/>}
+  {showMessage && <Message messageType={messageType} messageTitle={messageTitle} messageSubTitle={messageSubTitle}/>}
 </div>
 )
 }

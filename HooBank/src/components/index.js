@@ -18,10 +18,10 @@ export {ButtonCircle} from './UI/Buttons/ButtonCircle/ButtonCircle'
 export {ButtonDefault} from './UI/Buttons/ButtonDefault/ButtonDefault'
 
 /* Feature1 section - ButtonDefault component */
-export {Modal} from './Modal/Modal'
+export {Modal} from './UI/Pop-ups/Modal/Modal'
 
 /* Error component */
-export {Error} from './Error/Error'
+export {Message} from './UI/Pop-ups/Message/Message'
 
 /* Numbers section - Number component */
 export {Number} from './Number/Number'
