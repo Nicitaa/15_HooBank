@@ -1,32 +1,46 @@
 import { useContext, useState } from "react";
-import {userActive,trustedByCompany,transaction} from './../../pages/Home/Numbers'
-import { Error } from "../../components"
-import { shitContext } from "./../../pages/Home/Home";
-
-//let react somehow understand that I change data to change it in Numbers
+import { Error } from ".."
+import { NumbersContext } from "../../context/NumbersContext";
 
 export function Modal ({modalTitle}) {
-  const { setContextState } = useContext(shitContext);
+  //context for changing numbers
+  const { setNumbers,number } = useContext(NumbersContext);
+  //states for error
+  const [errorTitle,setErrorTitle] = useState('')
+  const [errorSubTitle,setErrorSubTitle] = useState('')
+  const [showError,setShowError] = useState(false)
+  //values in inputs
   const [inputUserActive,setInputUserActive] = useState('')
   const [inputTrustedByCompany,setInputTrustedByCompany] = useState('')
   const [inputTransaction,setInputTransaction] = useState('')
-  
   const changeNumbersHandler = (e) => {
     e.preventDefault();
-
-    if (userActive.length === 0) {
-          console.log('enter user active')
-          return <Error errorTitle={'Enter user active'}/>
+    
+    if (inputUserActive.length === 0) {
+          setShowError(true)
+          setErrorTitle('Enter user active')
+          setErrorSubTitle('Common reason for it you not fill user active field')
+          setTimeout(() => setShowError(false),5000)
         }
-        if (trustedByCompany.length === 0) {
-          return <Error errorTitle={'Enter trusted by company'}/>
+        else if (inputTrustedByCompany.length === 0) {
+          setShowError(true)
+          setErrorTitle('Enter trusted by company')
+          setErrorSubTitle('Common reason for it you not fill trusted by company field')
+          setTimeout(() => setShowError(false),5000)
         }
-        if (transaction.length === 0) {
-          return <Error errorTitle={'Enter transaction'}/>
+        else if (inputTransaction.length === 0) {
+          setShowError(true)
+          setErrorTitle('Enter transaction')
+          setErrorSubTitle('Common reason for it you not fill transaction field')
+          setTimeout(() => setShowError(false),5000)
         }
-        
-    setContextState({ userActive: inputUserActive });
-    console.log("Modal - newUserActive changed");
+        else {
+          
+        }
+      setNumbers({
+      userActive: inputUserActive,
+      trustedByCompany:inputTrustedByCompany,
+      transaction:inputTransaction });
   };
 
 
@@ -42,19 +56,20 @@ return (
     <h1 className="text-2xl font-bold text-center mb-8">{modalTitle}</h1>
     <div className="flex flex-col gap-4">
     <input className="border rounded outline-0 w-full px-2 py-2" type="text"
-    placeholder={`User active ${userActive}`}
+    placeholder={`User active ${number.userActive}`}
     value={inputUserActive} onChange={e => setInputUserActive(e.target.value)}/>
     <input className="border rounded outline-0 w-full px-2 py-2" type="text" 
-    placeholder={`Trusted by company ${trustedByCompany}`}
+    placeholder={`Trusted by company ${number.trustedByCompany}`}
     value={inputTrustedByCompany} onChange={e => setInputTrustedByCompany(e.target.value)}/>
      <input className="border rounded outline-0 w-full px-2 py-2" type="text" 
-     placeholder={`Transaction ${transaction}`}
+     placeholder={`Transaction ${number.transaction}`}
     value={inputTransaction} onChange={e => setInputTransaction(e.target.value)}/>
     <button className="border rounded outline-0 bg-gray-300 text-gray-950 font-bold w-[140px] 
     h-[40px]" type="submit">
      Contrast</button>
     </div>
   </form>
+  {showError && <Error errorTitle={errorTitle} errorSubTitle={errorSubTitle}/>}
 </div>
 )
 }

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import './buttonDefault.css'
 import PropTypes from 'prop-types'
-import { ButtonsContext } from '../../../../context/ButtonsContext'
+import { ButtonsContext } from '../../../../context/ModalContext'
 
 export function ButtonDefault ({buttonDefaultTitle,html,children}) {
 
