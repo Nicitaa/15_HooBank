@@ -89,10 +89,10 @@ return (
       `}
       >
        <div className='flex gap-8'>
-        <svg className='w-[20%] h-[50%]'>
-          <use xlinkHref='./sprite.svg#get-it-in-apple-store'/>
+        <svg className='w-[20%] h-[50%] cursor-pointer' onClick={() => openUrl('https://github.com/Nicitaa')}>
+          <use xlinkHref='./sprite.svg#get-it-in-apple-store' />
         </svg>
-        <svg className='w-[20%] h-[50%]'>
+        <svg className='w-[20%] h-[50%] cursor-pointer' onClick={() => openUrl('https://github.com/Nicitaa')}>
           <use xlinkHref='./sprite.svg#get-it-in-google-play'/>
         </svg>
        </div>
@@ -140,7 +140,7 @@ return (
 
 
     <Feedbacks/>
-
+    <Companys/>
 
     {modal && <Modal modalTitle={'Admin panel'} closeModal={closeModal}>
     <ModalChangeNumber/>
