@@ -1,30 +1,41 @@
+/* UI/UX */
+//buttons
+export {ButtonCircle} from './UI/Buttons/ButtonCircle/ButtonCircle'
+export {ButtonDefault} from './UI/Buttons/ButtonDefault/ButtonDefault'
+//modals
+export {Modal} from './UI/Modals/Modal/Container/Modal'
+export {ModalChangeNumber} from './UI/Modals/Modal/Content/ModalChangeNumber'
+export {Message} from './UI/Modals/Message/Message'
+//input
+export {Input} from './UI/Input/Input'
+
+
+
+
 /* Navbar component */
 export {Navbar} from './Navbar/Navbar'
 
-/* Main section - discount component */
+
+
+
+
+/* Main section */
 export {Discount} from './Discount/Discount'
 
-/* Main section - discount component */
 export {Text} from './Text/Text'
 
-/* Main section - image component */
 export {Image} from './Image/Image'
 
-/* Buttons */
-/* Main section - ButtonCircle component */
-export {ButtonCircle} from './UI/Buttons/ButtonCircle/ButtonCircle'
 
-/* Feature1 section - ButtonDefault component */
-export {ButtonDefault} from './UI/Buttons/ButtonDefault/ButtonDefault'
 
-/* Feature1 section - ButtonDefault component */
-export {Modal} from './UI/Pop-ups/Modal/Modal'
 
-/* Error component */
-export {Message} from './UI/Pop-ups/Message/Message'
 
-/* Numbers section - Number component */
+/* Numbers section */
 export {Number} from './Number/Number'
 
-/* Featrure component */
+
+
+
+
+/* Features section */
 export {Feature} from './Feature/Feature'

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Number } from "../../components"
-import { NumbersContext } from "../../context/NumbersContext";
+import { Number } from "../../../components"
+import { NumbersContext } from "../../../context/NumbersContext";
 
 
 

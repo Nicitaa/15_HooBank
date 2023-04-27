@@ -1,18 +1,24 @@
+/* react */
 import React from 'react';
 import ReactDOM from 'react-dom/client'
-
 import App from './App'
-import './index.css'
 import { BrowserRouter } from 'react-router-dom';
-import { ButtonsState } from './context/ModalContext';
+import './index.css'
+/* context */
+import { NumbersProvider,MessageProvider,ModalState } from './context';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
      
 <BrowserRouter>
-    <ButtonsState>
-        <App />
-    </ButtonsState>
+    <ModalState>
+        <MessageProvider>
+            <NumbersProvider>
+                <App />  
+            </NumbersProvider>
+        </MessageProvider>
+    </ModalState>
 </BrowserRouter>
     
 );

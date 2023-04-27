@@ -1,6 +1,7 @@
 .text-container {
   display: flex;
   flex-flow: column;
+  margin-bottom: 1.5rem;
 }
 
 .text-title {
@@ -11,4 +12,5 @@
 
 .text-subTitle {
   font-size: 20px;
+  padding-bottom: 1.5rem;
 }

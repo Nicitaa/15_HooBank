@@ -1,27 +1,27 @@
 import React from 'react'
 import { createContext, useState } from "react"
 
-interface IButtosContext {
+interface IModalContext {
   modal:boolean
-  open:() => void
-  close:() => void
+  openModal:() => void
+  closeModal:() => void
 }
 
-export const ButtonsContext = createContext<IButtosContext>({
+export const ModalContext = createContext<IModalContext>({
   modal: false,
-    open: () => {},
-    close: () => {}
+  openModal: () => {},
+  closeModal: () => {}
 })
 
-export const ButtonsState = ({children}:{children:React.ReactNode}) => {
-  const [modal,setModal] = useState(true)
+export const ModalState = ({children}:{children:React.ReactNode}) => {
+  const [modal,setModal] = useState(false)
 
-  const open = () => setModal(true)
-  const close = () => setModal(false)
+  const openModal = () => setModal(true)
+  const closeModal = () => setModal(false)
 
   return (
-    <ButtonsContext.Provider value={{modal,open,close}}>
+    <ModalContext.Provider value={{modal,openModal,closeModal}}>
       {children}
-    </ButtonsContext.Provider>
+    </ModalContext.Provider>
   )
 }

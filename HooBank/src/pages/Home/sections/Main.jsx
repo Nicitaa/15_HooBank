@@ -1,9 +1,6 @@
-import { Discount,Text,Image,ButtonCircle } from "../../components"
+import { Discount,Text,Image,ButtonCircle } from "../../../components"
 
 export function Main () {
-
-
-
 
 return (
   <section className="py-4 mb-32 flex">
@@ -31,7 +28,7 @@ return (
       fit your needs. We examine annual percentage rates, annual fees.</p>}/>
     </div>
 
-    <Image imageClass={'absolute w-[450px] right-0'} imgUrl={'./robot.png'}/>
+    <Image imageClass={'absolute w-[450px] right-0'} imgUrl={'./robot.webp'}/>
  
 
     <ButtonCircle buttonCircleClass={'absolute top-[32%] left-[37%]'} buttonTitle={<p>Get <br/>started</p>}/>   
