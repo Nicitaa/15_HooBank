@@ -2,7 +2,7 @@ import { Feedback } from "../../../components/Feedback/Feedback";
 
 export function Feedbacks () {
 return (
-<section className="py-4 mb-32 flex flex-col gap-3">
+<section className="py-4 mb-24 flex flex-col gap-3">
 <div className="flex mb-12">
   <h1 className="title w-[50%] text-5xl font-bold leading-relaxed ">What people are<br/>
   saying about us</h1>

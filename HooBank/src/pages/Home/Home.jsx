@@ -1,7 +1,7 @@
 /* react */
 import { useContext } from 'react'
 /* sections */
-import {Main,Numbers,Features,Feedbacks} from './'
+import {Main,Numbers,Features,Feedbacks, Companys} from './'
 /* context */
 import { ModalContext } from '../../context'
 /* components */
