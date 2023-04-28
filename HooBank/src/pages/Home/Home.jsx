@@ -1,11 +1,12 @@
 /* react */
 import { useContext } from 'react'
 /* sections */
-import {Main,Numbers,Features,Feedbacks, Companys} from './'
+import {Main,Numbers,Features,Feedbacks, Companys, CTA} from './'
 /* context */
 import { ModalContext } from '../../context'
 /* components */
-import { Text,Feature,ButtonDefault,Modal,ModalChangeNumber, Image } from "../../components"
+import { Text,Feature,ButtonDefault,Modal,ModalChangeNumber, Image, Footer } from "../../components"
+import { Card } from '../../components/Card/Card'
 
 export function Home () {
   
@@ -56,7 +57,7 @@ return (
   featureSubTitle={`
   We take proactive steps make sure your information 
   and transactions are secure.`}/>
-   <Feature svgUrl={'./sprite.svg#telegram'} featureTitle={'Balance Transfer'}
+   <Feature svgUrl={'./sprite.svg#send'} featureTitle={'Balance Transfer'}
   featureSubTitle={`
   A balance transfer credit card can save you a lot of 
   money in interest charges.`}/>
@@ -141,6 +142,12 @@ return (
 
     <Feedbacks/>
     <Companys/>
+    <CTA>
+      <Card cardTitle={`Let's try our service now`} cardSubTitle={`Everything you need to accept card payments and 
+      grow your business anywhere on the planet.`}/>
+    </CTA>
+
+    <Footer/>
 
     {modal && <Modal modalTitle={'Admin panel'} closeModal={closeModal}>
     <ModalChangeNumber/>

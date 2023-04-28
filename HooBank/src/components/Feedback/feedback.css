@@ -1,12 +1,13 @@
-.card {
+.feedback-card-container {
   padding:3rem;
   display: flex;
   flex-flow:column;
+  gap:1.5rem;
   border-radius: 16px;
   width: 27%;
 
 }
 
-.card:hover {
+.feedback-card-container:hover {
   background: linear-gradient(144.39deg, #181a1b -278.56%, #52595c -78.47%, #0e0d17 91.61%);
 }

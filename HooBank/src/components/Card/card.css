@@ -1,0 +1,9 @@
+.xl-card-container {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 16px;
+  background: linear-gradient(-168.39deg, rgb(24, 26, 27) -278.56%, rgb(82, 89, 92) -78.47%, rgb(14, 13, 23) 91.61%);
+}

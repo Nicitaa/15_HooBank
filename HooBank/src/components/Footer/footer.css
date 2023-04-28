@@ -1,0 +1,29 @@
+.footer-top {
+  display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #3F3E45;
+}
+.footer-top-left {
+  min-width: 40%;
+}
+.footer-top-right {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: 8rem;
+  row-gap: 2rem;
+}
+
+.li-item:hover {
+  color: #1AF7FF;
+}
+
+
+
+
+.footer-bottom {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

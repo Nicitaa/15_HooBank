@@ -5,7 +5,7 @@ export function Navbar() {
     <nav className="flex justify-between py-4">
      
      <svg className='w-36 h-14'>
-        <use xlinkHref="./sprite.svg#navbar-logo" />
+        <use xlinkHref="./sprite.svg#logo" />
       </svg>
 
     <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg'>

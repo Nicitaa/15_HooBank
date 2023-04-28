@@ -28,6 +28,6 @@ className="fixed border bottom-0 right-5 bg-[#141414] max-w-[90vh]
 )
 }
 
-Error.propTypes = {
-  errorTitle:PropTypes.string.isRequired
+Message.propTypes = {
+  messageTitle:PropTypes.string.isRequired
 }

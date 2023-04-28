@@ -2,7 +2,7 @@ import './feedback.css'
 
 export function Feedback ({feedbackTitle,imgUrl,feedbackAuthor,feedbackMajor}) {
 return (
-<card className='card flex gap-6'>
+<div className='feedback-card-container'>
   {/* with png or webp - bad quality - only with svg in <img/> normal quality and size*/}
   <img className='w-[42px] h-[27px]' src="./quotes.svg" alt="" />
   <p className='title text-[18px] py-4 min-h-[60%]'>{feedbackTitle}</p>
@@ -13,6 +13,6 @@ return (
     <h2 className='subTitle'>{feedbackMajor}</h2>
     </div>
   </div>
-</card>
+</div>
 )
 }

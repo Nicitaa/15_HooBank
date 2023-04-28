@@ -14,7 +14,8 @@ export {Input} from './UI/Input/Input'
 
 /* Navbar component */
 export {Navbar} from './Navbar/Navbar'
-
+/* Footer component */
+export {Footer} from './Footer/Footer'
 
 
 
