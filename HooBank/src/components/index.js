@@ -40,3 +40,10 @@ export {Number} from './Number/Number'
 
 /* Features section */
 export {Feature} from './Feature/Feature'
+
+
+
+
+
+/* Absolute component */
+export {Glare} from './Glare/Glare'

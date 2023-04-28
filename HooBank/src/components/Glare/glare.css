@@ -1,0 +1,43 @@
+.glare {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  filter: blur(100px);
+  background-color: initial;
+
+}
+
+
+.glare-left {
+  left: -57%;
+}
+
+.glare-right {
+  right: -57%;
+}
+
+
+.glare-blue {
+  background: linear-gradient(180deg,rgba(188,165,255,0) 0%,#214d76 100%);
+}
+
+.glare-purple {
+  background: linear-gradient(180deg,rgba(54, 45, 66, 0) 0%,#a514c6 100%);
+}
+
+.glare-red {
+  background:-moz-linear-gradient(0deg, rgba(31, 17, 206, 0) 0%, rgba(229, 43, 43, 1) 100%); 
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(0deg, rgba(31, 17, 206, 0) 0%, rgba(229, 43, 43, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-linear-gradient(0deg, rgba(31, 17, 206, 0) 0%, rgba(229, 43, 43, 1) 100%);
+
+  /* ie 10+ */
+  background:-ms-linear-gradient(0deg, rgba(31, 17, 206, 0) 0%, rgba(229, 43, 43, 1) 100%);
+
+  /* global 94%+ browsers support */
+  background:linear-gradient(0deg, rgba(31, 17, 206, 0) 0%, rgba(229, 43, 43, 1) 100%);  
+}

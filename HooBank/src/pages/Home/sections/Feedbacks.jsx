@@ -1,3 +1,4 @@
+import { Glare } from "../../../components";
 import { Feedback } from "../../../components/Feedback/Feedback";
 
 export function Feedbacks () {
@@ -18,6 +19,10 @@ return (
   <Feedback feedbackTitle={`It is usually people in the money business, finance, and international trade that are really rich.`}
   imgUrl={'./people03.webp'} feedbackAuthor={'Kenn Gallagher'} feedbackMajor={'Founder & Leader'}/>
 </div>
+
+
+<Glare glareClass={'glare-purple glare-right'}/>    
+
 
 </section>
 )
