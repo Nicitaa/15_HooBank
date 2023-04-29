@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useState,useRef } from "react";
+import { gsap } from 'gsap'
 
 export const MessageContext = createContext()
 
@@ -7,6 +8,18 @@ export function MessageProvider({children}) {
    const [messageType,setMessageType] = useState('')
    const [messageTitle,setMessageTitle] = useState('')
    const [messageSubTitle,setMessageSubTitle] = useState('')
+
+  /* logic for - aniamtionIn - wait(4000) - animationOut */
+  const messageRef = useRef(null);
+  function hideMessage() {
+    const message = messageRef.current;
+    console.log(message)
+    gsap.to(message, {
+      duration: 1,
+      y:80,
+      onComplete: () => setShowMessage(false),
+    });
+  }
 
 
   return (
@@ -20,6 +33,8 @@ export function MessageProvider({children}) {
       messageType,
       messageTitle,
       messageSubTitle,
+      messageRef,
+      hideMessage
       }}>
       {children}
     </MessageContext.Provider>

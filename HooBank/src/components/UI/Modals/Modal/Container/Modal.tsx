@@ -1,4 +1,4 @@
-import React, { FormEvent, useContext, useEffect, useRef } from 'react'
+import React, { useContext } from 'react'
 import { Message } from '../../Message/Message'
 import { MessageContext } from '../../../../../context'
 import './modal.css'

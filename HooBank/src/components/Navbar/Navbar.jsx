@@ -8,17 +8,28 @@ import { gsap } from "gsap";
 
 
 export function Navbar() {
-  const [showMenu,setShowMenu] = useState(false)
+  const [showSidebar,setShowSidebar] = useState(false)
+  const [svgRotate, setSvgRotate] = useState(true);
+
+  function showMobileSidebar() {
+    setShowSidebar(true)
+    setSvgRotate(true)
+  }
+  function hideMobileSidebar() {
+    setShowSidebar(false)
+    setSvgRotate(false)
+  }
 
   const sidebarRef = useRef(null)
   
   function hideSidebar() {
     const sidebar = sidebarRef.current
     gsap.to(sidebar, {duration:0.2,x:-300,
-      onComplete: () => setShowMenu(false)
-    },);
+      onComplete: () => hideMobileSidebar(),
+    },)
   }
 
+  /* code below doesn't work */
   useEffect(() => {
     const sidebar = sidebarRef.current;
     let isDown = false;
@@ -47,12 +58,11 @@ export function Navbar() {
     }
   }, []);
 
-
-
   return (
-    <nav className="flex justify-between py-4 SD:h-[10rem] SD:min-w-[25rem] SD:items-center SD:pb-12">
+    <nav className="flex justify-between py-4 w-full SD:h-[10rem] SD:items-center SD:pb-12">
      
-     <svg className='w-36 h-14 SD:h-[10rem] SD:min-w-[10rem]'>
+     <svg
+      className='w-36 h-14 SD:h-[10rem] SD:min-w-[10rem]'>
         <use xlinkHref="./sprite.svg#logo" />
       </svg>
 
@@ -64,11 +74,14 @@ export function Navbar() {
     </ul>
 
     <div>
-      <svg className='w-12 h-12 fill-white HD:hidden FHD:hidden QHD:hidden 4K:hidden'
-      onClick={() => setShowMenu(true)}>
+      <motion.svg animate={{
+        rotate: svgRotate ? 180 : 0
+      }}
+       className='w-12 h-12 fill-white HD:hidden FHD:hidden QHD:hidden 4K:hidden'
+      onClick={() => showMobileSidebar()}>
         <use xlinkHref='./sprite.svg#menu-expand'/>
-      </svg>
-      {showMenu && 
+      </motion.svg>
+      {showSidebar && 
       <div className={`${styles.modalBackground}`} onClick={() => hideSidebar()}>
       <motion.div className='mobile-sidebar' ref={sidebarRef}
       animate={{x:[-150,0]}}

@@ -2,17 +2,16 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  column-gap: 5px;
-  padding: 0 1rem;
-  width: auto;
-  height: 50px;
+  column-gap: 0.2em;
+  padding: 0.4em 1em;
+  margin:auto;
+  width: max-content;
   background: linear-gradient(125.17deg, rgb(29, 32, 33) 0%, rgb(14, 13, 23) 100%);
   border-radius: 12px;
 }
 
 .percent {
-  width: 35px;
-  height: 35px;
+  min-width:2.4em;
 }
 
 .discount-title {
