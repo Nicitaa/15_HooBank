@@ -8,6 +8,14 @@
 body {
   background-color:rgba(0, 3, 12,1);
   font-family: 'Open Sans',sans-serif;
+  height: -webit-fill-avaible;
+  min-height: 100vh;
+  /* max-width: 100%;
+  overflow-x: hidden; */
+}
+
+html {
+  height: -webit-fill-avaible;
 }
 
 .text-gradient {

@@ -1,0 +1,31 @@
+.mobile-sidebar {
+  position: fixed;
+  
+  /*height 100vh*/
+  top:0;
+  bottom:0;
+  
+  left:0;
+  width: 30vh;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  font-size: 2em;
+  padding: 3em 0.4em;
+  background-image: linear-gradient(144.39deg, rgb(172, 173, 173) -278.56%, rgb(82, 89, 92) -78.47%, rgb(14, 13, 23) 91.61%);
+  background-color: initial;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  gap: 0.5em;
+}
+
+.mobile-sidebar li {
+  border-bottom:1px solid;
+  border-image: linear-gradient(rgba(255, 0, 0, 0), #909090)100;
+  border-radius: 1em;
+}

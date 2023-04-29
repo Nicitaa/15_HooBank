@@ -26,11 +26,11 @@ return (
       subtitle={<p>Our team of experts uses a methodology to 
       identify the credit cards most likely to 
       fit your needs. We examine annual percentage rates, annual fees.</p>}/>
-    <ButtonCircle buttonCircleClass={'absolute top-[34%] left-[32%]'} buttonTitle={<p>Get <br/>started</p>}/>   
+    <ButtonCircle buttonCircleClass={'absolute top-[34%] left-[32%] SD:hidden'} buttonTitle={<p>Get <br/>started</p>}/>   
 
     </div>
 
-    <Image imageClass={'absolute w-[450px] right-0'} imgUrl={'./robot.webp'}/>
+    <Image imageClass={'absolute w-[450px] right-0 SD:hidden'} imgUrl={'./robot.webp'}/>
  
 
 

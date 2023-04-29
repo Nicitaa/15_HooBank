@@ -5,7 +5,7 @@ import { Home,FeaturesPage,ProductPage,ClientsPage } from './pages'
 
 const App = () => {
   return (
-    <div className="container px-16 min-h-[100vh]">
+    <div className="container px-16 SD:px-0">
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
