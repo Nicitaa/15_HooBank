@@ -20,6 +20,8 @@ export function ModalChangeNumber () {
    const [inputUserActive,setInputUserActive] = useState('')
    const [inputTrustedByCompany,setInputTrustedByCompany] = useState('')
    const [inputTransaction,setInputTransaction] = useState('')
+
+   
    const changeNumbersHandler = (e:React.FormEvent<HTMLFormElement>) => {
     
     const inputUserActiveName= 'user active'
@@ -28,9 +30,7 @@ export function ModalChangeNumber () {
 
     e.preventDefault();
      
-     function wait() {
-       setTimeout(() => setShowMessage(false),5000)
-     }
+    
     
      setShowMessage(true)
 
@@ -38,13 +38,11 @@ export function ModalChangeNumber () {
       setMessageType('success')
       setMessageTitle('Data changed')
       setMessageSubTitle('Enjoy!')
-      wait()
      }
      function errorMessage(inputName: string) {
       setMessageType('error')
       setMessageTitle(`Enter ${inputName}`)
       setMessageSubTitle(`Common reason for it you not fill ${inputName} field`)
-      wait()
      }
 
 
