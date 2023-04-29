@@ -18,7 +18,8 @@ transition={{duration:0.25}}
 className="fixed border bottom-0 right-5 bg-[#141414] max-w-[90vh]
  rounded px-4 py-2 flex gap-2"
  onClick={e => e.stopPropagation()}
- {...setTimeout(() => hideMessage(),5000)}>
+ {...setTimeout(() => hideMessage(),4000)}
+ >
 
   <svg className={`w-12 h-12 ${svgColor}`}>
     <use xlinkHref={`./sprite.svg#${messageType}`}></use>
