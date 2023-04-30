@@ -5,7 +5,7 @@ import {Main,Numbers,Features,Feedbacks, Companys, CTA} from './'
 /* context */
 import { ModalContext } from '../../context'
 /* components */
-import { Text,Feature,ButtonDefault,Modal,ModalChangeNumber, Image, Footer } from "../../components"
+import { Text,Feature,ButtonDefault,Modal,ModalChangeNumber, Image } from "../../components"
 import { Card } from '../../components/Card/Card'
 
 export function Home () {
@@ -26,17 +26,17 @@ return (
       {/* You do the business */}
     <Features>
 
-    <div className="flex flex-col max-w-[50%]">
+    <div className="flex flex-col max-w-[50%] XS:text-center XS:min-w-full SM:min-w-full SM:text-center">
   <Text title={
     <h1>You do the business,
     we will handle the money.</h1>}
     subtitle={
-      <p>With the right credit card, y
-        ou can improve your financial life by building credit, 
+      <p>With the right credit card, you can 
+        improve your financial life by building credit, 
         earning rewards and saving money. 
         But with hundreds of credit cards on the market.</p>
     }/>
-    <div className="flex gap-4">
+    <div className="flex gap-4 XS:justify-center SM:justify-center SD:justify-center">
       <ButtonDefault clickEvent={() => openUrl('https://github.com/Nicitaa')} buttonDefaultTitle={<h1>My github</h1>}>
       <svg className='w-6 h-6'>
         <use xlinkHref="./sprite.svg#github" />
@@ -48,7 +48,7 @@ return (
 
 
 
-  <div className="flex flex-col gap-4 max-w-[50%]">
+  <div className="flex flex-col gap-4 max-w-[50%] XS:hidden SM:hidden SD:gap-12">
   <Feature svgUrl={'./sprite.svg#star'} featureTitle={'Rewards'}
   featureSubTitle={`
   The best credit cards offer some tantalizing 
@@ -74,8 +74,8 @@ return (
 
 
       {/* Easily control */}
-    <Features>
-      <Image imageClass='w-max-[50%]' imgUrl='./bill.webp'/>
+    <Features featureClassName={'SD:flex-wrap-reverse SD:justify-center'}>
+      <Image imageClass='max-w-[50%] XS:hidden SM:hidden SD:min-w-[60vw] SD:h-auto' imgUrl='./bill.webp'/>
       
 
 
@@ -89,15 +89,20 @@ return (
       rhoncus aliporttitor integer platea placerat.
       `}
       >
-       <div className='flex gap-8'>
-        <svg className='w-[20%] h-[50%] cursor-pointer' onClick={() => openUrl('https://github.com/Nicitaa')}>
+       <div className='flex gap-8 XS:pt-4 XS:justify-center SM:justify-center SD:justify-center SD:h-[3em]'>
+        <svg className='w-[20%] h-[50%] cursor-pointer XS:h-[20vw] XS:w-[40vw] SM:w-[40vw] SM:pt-8
+        SD:h-auto' 
+        onClick={() => openUrl('https://github.com/Nicitaa')}>
           <use xlinkHref='./sprite.svg#get-it-in-apple-store' />
         </svg>
-        <svg className='w-[20%] h-[50%] cursor-pointer' onClick={() => openUrl('https://github.com/Nicitaa')}>
+        <svg className='w-[20%] h-[50%] cursor-pointer XS:h-[20vw] XS:w-[40vw] SM:w-[40vw] SM:pt-8
+        SD:h-auto'
+         onClick={() => openUrl('https://github.com/Nicitaa')}>
           <use xlinkHref='./sprite.svg#get-it-in-google-play'/>
         </svg>
        </div>
       </Text>
+
       
     </Features>
 
@@ -113,8 +118,8 @@ return (
 
 
           {/* Find a better card */}
-          <Features featureClassName={'flex-row-reverse'}>
-      <Image imageClass='w-max-[50%]' imgUrl='./card.webp'/>
+          <Features featureClassName={'flex-row-reverse SD:flex-wrap-reverse SD:justify-center'}>
+      <Image imageClass='w-max-[50%] XS:hidden SM:hidden SD:w-auto SD:h-[50vw]' imgUrl='./card.webp'/>
       
 
 
@@ -128,7 +133,7 @@ return (
       rhoncus aliporttitor integer platea placerat.
       `}
       >
-       <div className='flex gap-8'>
+       <div className='flex gap-8 XS:justify-center SM:justify-center SD:justify-center'>
         <ButtonDefault clickEvent={() => openUrl('https://github.com/Nicitaa')} buttonDefaultTitle='Get started'/>
        </div>
       </Text>
@@ -147,7 +152,6 @@ return (
       grow your business anywhere on the planet.`}/>
     </CTA>
 
-    <Footer/>
 
     {modal && <Modal modalTitle={'Admin panel'} closeModal={closeModal}>
     <ModalChangeNumber/>

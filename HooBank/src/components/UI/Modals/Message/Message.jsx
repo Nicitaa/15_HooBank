@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 import { motion } from 'framer-motion'
 import { MessageContext } from '../../../../context';
 
 export function Message ({messageTitle,messageSubTitle,messageType}) {
+  const XS = window.innerWidth < 361
+  console.log(XS)
   const {messageRef,hideMessage} = useContext(MessageContext)
   //messageTypes - info / success / error
   let svgColor;
@@ -13,10 +15,10 @@ export function Message ({messageTitle,messageSubTitle,messageType}) {
   
 return (
 <motion.div ref={messageRef}
-animate={{y:[40,-10]}}
+animate={XS ? {y:[40,0]} : {y:[40,-10]}}
 transition={{duration:0.25}}
 className="fixed border bottom-0 right-5 bg-[#141414] max-w-[90vh]
- rounded px-4 py-2 flex gap-2"
+ rounded px-4 py-2 flex gap-2 XS:right-0 XS:w-[100vw] SD:w-[90vw]"
  onClick={e => e.stopPropagation()}
  {...setTimeout(() => hideMessage(),5000)}>
 

@@ -97,7 +97,7 @@ return (
   inputPlaceholder={`Trusted by company ${number.trustedByCompany}`}/>
   <Input inputValue={inputTransaction} inputOnChange={setInputTransaction} 
   inputPlaceholder={`Transaction ${number.transaction}`}/>
-  <ButtonDefault buttonDefaultTitle={'Update'} clickEvent={changeNumbersHandler}/>
+  <ButtonDefault buttonDefaultTitle={'Update'} buttonClassName='SM:w-full' clickEvent={changeNumbersHandler}/>
   </form>
 </>
 )

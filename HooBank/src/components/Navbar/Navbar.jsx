@@ -9,7 +9,8 @@ import { gsap } from "gsap";
 
 export function Navbar() {
   const [showSidebar,setShowSidebar] = useState(false)
-  const [svgRotate, setSvgRotate] = useState(true);
+  const [svgRotate, setSvgRotate] = useState(false);
+
 
   function showMobileSidebar() {
     setShowSidebar(true)
@@ -17,12 +18,12 @@ export function Navbar() {
   }
   function hideMobileSidebar() {
     setShowSidebar(false)
-    setSvgRotate(false)
   }
 
   const sidebarRef = useRef(null)
   
   function hideSidebar() {
+    setSvgRotate(false)
     const sidebar = sidebarRef.current
     gsap.to(sidebar, {duration:0.2,x:-300,
       onComplete: () => hideMobileSidebar(),
@@ -30,63 +31,61 @@ export function Navbar() {
   }
 
   /* code below doesn't work */
-  useEffect(() => {
-    const sidebar = sidebarRef.current;
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  const [touchStart, setTouchStart] = useState(null)
+const [touchEnd, setTouchEnd] = useState(null)
 
-    if (sidebar) {
-      sidebar.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - sidebar.offsetLeft;
-        scrollLeft = sidebar.scrollLeft;
-      });
+// the required distance between touchStart and touchEnd to be detected as a swipe
+const minSwipeDistance = 50 
 
-      window.addEventListener("mouseup", () => {
-        isDown = false;
-      });
+const onTouchStart = (e) => {
+  setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+  setTouchStart(e.targetTouches[0].clientX)
+}
 
-      window.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - sidebar.offsetLeft;
-        const speed = 1;
-        const walk = (x - startX) * speed;
-        sidebar.scrollLeft = scrollLeft - walk;
-      });
-    }
-  }, []);
+const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+const onTouchEnd = () => {
+  if (!touchStart || !touchEnd) return
+  const distance = touchStart - touchEnd
+  const isLeftSwipe = distance > minSwipeDistance
+  const isRightSwipe = distance < -minSwipeDistance
+  if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
+  isLeftSwipe && hideSidebar()
+}
 
   return (
-    <nav className="flex justify-between py-4 w-full SD:h-[10rem] SD:items-center SD:pb-12">
+    <nav className="flex justify-between py-6 w-full XS:max-h-[10rem] SM:max-h-[10rem] SM:items-center SM:pb-8
+    ">
      
      <svg
-      className='w-36 h-14 SD:h-[10rem] SD:min-w-[10rem]'>
+      className='w-36 h-14 SM:max-w-[10em]'>
         <use xlinkHref="./sprite.svg#logo" />
       </svg>
 
-    <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg SD:hidden'>
+    <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg XS:hidden SM:hidden SD:hidden'>
       <Link className='hover:text-gray-500' to='/'>Home</Link>
       <Link className='hover:text-gray-500' to='/features'>Features</Link>
       <Link className='hover:text-gray-500' to='/product'>Product</Link>
       <Link className='hover:text-gray-500' to='/clients'>Clients</Link>
     </ul>
 
-    <div>
-      <motion.svg animate={{
+   <div>
+     <motion.svg animate={{
         rotate: svgRotate ? 180 : 0
       }}
        className='w-12 h-12 fill-white HD:hidden FHD:hidden QHD:hidden 4K:hidden'
       onClick={() => showMobileSidebar()}>
         <use xlinkHref='./sprite.svg#menu-expand'/>
       </motion.svg>
+    </div>
+
       {showSidebar && 
-      <div className={`${styles.modalBackground}`} onClick={() => hideSidebar()}>
-      <motion.div className='mobile-sidebar' ref={sidebarRef}
+      <div className={`${styles.modalBackground}`} onClick={() => hideSidebar()}
+      onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+      <motion.div className='mobile-sidebar XS:w-[60vw] SM:w-[60vw] SD:w-[40vw]' ref={sidebarRef}
       animate={{x:[-150,0]}}
       transition={{duration:0.4}}>
-        <ul>
+        <ul onClick={e => e.stopPropagation()}>
           <li><Link className='hover:text-gray-500' to='/'>Home</Link></li>
           <li><Link className='hover:text-gray-500' to='/features'>Features</Link></li>
           <li><Link className='hover:text-gray-500' to='/product'>Product</Link></li>
@@ -95,7 +94,6 @@ export function Navbar() {
       </motion.div>
       </div>
       }
-    </div>
     </nav>
   );
 }

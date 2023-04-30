@@ -1,4 +1,3 @@
-
 .modal {
   position:fixed;
   top:10%;
@@ -25,4 +24,25 @@
 
     /* global 94%+ browsers support */
     background:linear-gradient(40deg, rgba(60, 41, 60, 1) 36%, rgba(13, 13, 127, 1) 100%);
+}
+
+@media (min-width:1px) and (max-width:360px) {
+  .modal{
+  width: 90vw;
+  top:10vw;
+}
+}
+
+@media (min-width:361px) and (max-width:719px) {
+  .modal{
+  width: 90vw;
+  top:10vw;
+}
+}
+
+@media (min-width:720px) and (max-width:1279px) {
+  .modal{
+  width: 90vw;
+  top:5vw;
+}
 }

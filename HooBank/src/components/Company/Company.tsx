@@ -8,7 +8,7 @@ type CompanyProps = {
 
 export function Company ({imgMaxWidth,imgUrl}:CompanyProps) {
 return (
-  <img className={`w-auto h-auto max-w-[${imgMaxWidth}px]`} src={imgUrl} />
+  <img className={`w-auto h-auto max-w-[${imgMaxWidth}px] SM:max-w-[8em] SM:max-h-[6em]`} src={imgUrl} />
 
 )
 }

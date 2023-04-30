@@ -1,11 +1,11 @@
 import { Routes,Route } from 'react-router-dom'
-import {Navbar} from './components'
+import {Navbar,Footer} from './components'
 import { Home,FeaturesPage,ProductPage,ClientsPage } from './pages'
 
 
 const App = () => {
   return (
-    <div className="container px-16 min-w-[100vw] overflow-x-hidden SD:px-4">
+    <div className="container px-16 min-w-[100vw] overflow-x-hidden XS:px-4 SM:px-4">
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -13,6 +13,7 @@ const App = () => {
         <Route path='/product' element={<ProductPage/>}/>
         <Route path='/clients' element={<ClientsPage/>}/>
       </Routes>
+    <Footer/>
     </div>
   )
 }

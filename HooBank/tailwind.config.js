@@ -7,20 +7,26 @@ export default {
   theme: {
     extend: {
       screens: {
-        'SD': {'min': '1px', 'max': '767px'},
-        // => @media (min-width: 1px and max-width: 767px) { ... }
+        'XS': {'min': '1px', 'max': '359px'},
+        // => @media (min-width: 1px and max-width: 359px) { ... }
+        
+        'SM': {'min': '360px', 'max': '719px'},
+        // => @media (min-width: 360px and max-width: 719px) { ... }
+
+        'SD': {'min': '720px', 'max': '1279px'},
+        // => @media (min-width: 720px and max-width: 1279px) { ... }
   
-        'HD': {'min': '768px', 'max': '1280px'},
-        // => @media (min-width: 768px and max-width: 1280px) { ... }
+        'HD': {'min': '1280px', 'max': '1919px'},
+        // => @media (min-width: 1280px and max-width: 1919px) { ... }
   
-        'FHD': {'min': '1281px', 'max': '1920px'},
-        // => @media (min-width: 1281px and max-width: 1920px) { ... }
+        'FHD': {'min': '1920px', 'max': '2559px'},
+        // => @media (min-width: 1920px and max-width: 2559px) { ... }
   
-        'QHD': {'min': '1921px', 'max': '2560px'},
-        // => @media (min-width: 1921px and max-width: 2560px) { ... }
+        'QHD': {'min': '2560px', 'max': '3839px'},
+        // => @media (min-width: 2560px and max-width: 3839px) { ... }
   
-        '4K': {'min': '2561px'},
-        // => @media (min-width: 2561px) { ... }
+        '4K': {'min': '3840px'},
+        // => @media (min-width: 3840px) { ... }
       },
     },
   },

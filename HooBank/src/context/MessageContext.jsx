@@ -13,7 +13,6 @@ export function MessageProvider({children}) {
   const messageRef = useRef(null);
   function hideMessage() {
     const message = messageRef.current;
-    console.log(message)
     gsap.to(message, {
       duration: 1,
       y:80,
