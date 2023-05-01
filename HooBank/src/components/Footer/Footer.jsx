@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { footerLinks } from '../../constant/data'
 import { FooterLinks } from './FooterLinks'
 import './footer.css'
 
@@ -22,24 +24,18 @@ return (
 
     <div className='footer-top-right XS:justify-around XS:text-center XS:flex-row XS:gap-y-8 XS:gap-x-4 
     SM:w-full SM:justify-around SM:text-center SM:flex-row SM:gap-y-8 SM:gap-x-4 SD:gap-x-8 SD:justify-around'>
-    <FooterLinks FooterLinksTitle={'Useful Links'}>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Content</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>How it works</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Create</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Explore</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Terms&Services</a></li>
-    </FooterLinks>
-     <FooterLinks FooterLinksTitle={'Community'}>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Help Center</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Partners</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Suggestions</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Blog</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Newsletters</a></li>
-    </FooterLinks>
-    <FooterLinks FooterLinksTitle={'Partner'}>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Our Partner</a></li>
-      <li className="li-item subTitle"><a href="https://github.com/Nicitaa" target='_blank'>Become a Partner</a></li>
-    </FooterLinks>
+      {footerLinks.map((section) => (
+          <div key={section.title}>
+            <h1 className='title mb-2'>{section.title}</h1>
+            <ul className='list-none flex flex-col'>
+            {section.links.map(link => (
+              <Link className='subTitle li-item' to={link.link} key={link.name}>{link.name}</Link>
+            ))}
+            </ul>
+          </div>
+        )
+      )}
+      
     </div>
 
     </div>

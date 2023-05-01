@@ -1,22 +1,21 @@
 import { Discount,Text,Image,ButtonCircle } from "../../../components"
 
+
 export function Main () {
 
 return (
-  <main className="py-4 mb-32 flex XS:mb-4 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center
-  HD:mb-16">
+  <main className={`py-4 mb-32 flex  XS:mb-4 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center
+  HD:mb-16 QHD:mb-8`}>
 
     <div className="main-content max-w-2xl">
     <Discount discountClass={`mb-4 XS:m-0 XS:mb-8 XS:max-w-[90vw] SM:mb-6 SD:mb-6 
     `} svgUrl={'./sprite.svg#percent'} 
-    discountTitle={
-        <p>
-        <span className='text-highlight'>20% </span>
-        Discount For{" "}
-        <span className='text-highlight'>1 Months </span>
-        Account
-        </p>
-    }/>
+    discountTitle={<p>
+      <span className='text-highlight'>20% </span>
+      Discount For{" "}
+      <span className='text-highlight'>1 Months </span>
+      Account
+      </p>}/>
     
     <Text textClass={'max-w-full XS:text-center SM:text-center SD:text-center FHD:min-w-[100vh]'}
       title={

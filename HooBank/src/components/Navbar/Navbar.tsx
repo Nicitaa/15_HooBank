@@ -1,4 +1,5 @@
 import './navbar.css'
+import {navLinks} from './../../constant/data'
 import { useEffect, useRef, useState,CSSProperties } from 'react';
 import { Link } from 'react-router-dom'; 
 import styles from "../../constant/styles";
@@ -118,10 +119,7 @@ export function Navbar() {
     {/* navbar-desktop-ul */}
     <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg XS:hidden SM:hidden SD:hidden
     FHD:text-[2.5rem]'>
-      <Link className='hover:text-gray-500' to='/'>Home</Link>
-      <Link className='hover:text-gray-500' to='/features'>Features</Link>
-      <Link className='hover:text-gray-500' to='/product'>Product</Link>
-      <Link className='hover:text-gray-500' to='/clients'>Clients</Link>
+      {navLinks.map((navLink) => <Link className='hover:text-gray-500' {...navLink} key={navLink.id}>{navLink.title}</Link>)}
     </ul>
 
 
