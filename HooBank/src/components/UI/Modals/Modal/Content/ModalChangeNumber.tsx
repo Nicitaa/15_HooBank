@@ -88,7 +88,7 @@ export function ModalChangeNumber () {
 
 return (
 <>
-  <form className='flex flex-col gap-4' onSubmit={changeNumbersHandler} onClick={e => e.stopPropagation()}>
+  <form className='flex flex-col gap-4 ' onSubmit={changeNumbersHandler} onClick={e => e.stopPropagation()}>
   
   
   <Input inputValue={inputUserActive} inputOnChange={setInputUserActive} 
@@ -97,7 +97,7 @@ return (
   inputPlaceholder={`Trusted by company ${number.trustedByCompany}`}/>
   <Input inputValue={inputTransaction} inputOnChange={setInputTransaction} 
   inputPlaceholder={`Transaction ${number.transaction}`}/>
-  <ButtonDefault buttonDefaultTitle={'Update'} buttonClassName='SM:w-full' clickEvent={changeNumbersHandler}/>
+  <ButtonDefault buttonDefaultTitle={'Update'} buttonClassName='SM:w-full FHD:max-w-[30%]' clickEvent={changeNumbersHandler}/>
   </form>
 </>
 )

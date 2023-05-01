@@ -37,12 +37,14 @@ return (
         But with hundreds of credit cards on the market.</p>
     }/>
     <div className="flex gap-4 XS:justify-center SM:justify-center SD:justify-center">
-      <ButtonDefault clickEvent={() => openUrl('https://github.com/Nicitaa')} buttonDefaultTitle={<h1>My github</h1>}>
-      <svg className='w-6 h-6'>
+      <ButtonDefault clickEvent={() => openUrl('https://github.com/Nicitaa')} 
+      buttonDefaultTitle={<h1 className='FHD:text-[1.8rem]'>My github</h1>}>
+      <svg className='w-6 h-6 FHD:w-12 FHD:h-12'>
         <use xlinkHref="./sprite.svg#github" />
       </svg>
       </ButtonDefault>
-      <ButtonDefault clickEvent={() => openModal()} buttonDefaultTitle={<h1>Admin panel</h1>}/>
+      <ButtonDefault clickEvent={() => openModal()} 
+      buttonDefaultTitle={<h1 className='FHD:text-[1.8rem]'>Admin panel</h1>}/>
     </div>
   </div>
 
@@ -91,12 +93,12 @@ return (
       >
        <div className='flex gap-8 XS:pt-4 XS:justify-center SM:justify-center SD:justify-center SD:h-[3em]'>
         <svg className='w-[20%] h-[50%] cursor-pointer XS:h-[20vw] XS:w-[40vw] SM:w-[40vw] SM:pt-8
-        SD:h-auto' 
+        SD:h-auto FHD:w-[25%] FHD:h-auto' 
         onClick={() => openUrl('https://github.com/Nicitaa')}>
-          <use xlinkHref='./sprite.svg#get-it-in-apple-store' />
+          <use xlinkHref='./sprite.svg#get-it-in-apple-store'/>
         </svg>
         <svg className='w-[20%] h-[50%] cursor-pointer XS:h-[20vw] XS:w-[40vw] SM:w-[40vw] SM:pt-8
-        SD:h-auto'
+        SD:h-auto FHD:w-[25%] FHD:h-auto'
          onClick={() => openUrl('https://github.com/Nicitaa')}>
           <use xlinkHref='./sprite.svg#get-it-in-google-play'/>
         </svg>

@@ -11,7 +11,7 @@ interface ButtonDefaultProps {
 export function ButtonDefault ({buttonDefaultTitle,children,clickEvent,buttonClassName}:ButtonDefaultProps) {
 return (
 <button onClick={clickEvent} className={`button-default-container ${buttonClassName} XS:text-[0.8em] XS:max-h-[3.5em]
-XS:mt-6 XS:max-w-[40vw] SM:mt-8`}>
+XS:mt-6 XS:max-w-[40vw] SM:mt-8 FHD:w-[25vh] FHD:h-[8vh] FHD:text-[2rem]`}>
   {children}
   {buttonDefaultTitle}
 </button>

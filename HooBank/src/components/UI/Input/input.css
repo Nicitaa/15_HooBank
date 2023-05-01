@@ -7,3 +7,14 @@
 
   background: rgba(0,0,0,0.4);
 }
+
+@media (min-width:1920px) and (max-width:2559px) {
+  .input {
+    font-size: 2rem;
+    padding: 1rem;
+    height: 6rem;
+  }
+  .input::placeholder {
+    font-size: 2rem;
+  }
+}

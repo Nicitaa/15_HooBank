@@ -5,7 +5,6 @@ import { MessageContext } from '../../../../context';
 
 export function Message ({messageTitle,messageSubTitle,messageType}) {
   const XS = window.innerWidth < 361
-  console.log(XS)
   const {messageRef,hideMessage} = useContext(MessageContext)
   //messageTypes - info / success / error
   let svgColor;

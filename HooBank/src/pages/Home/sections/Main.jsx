@@ -3,10 +3,12 @@ import { Discount,Text,Image,ButtonCircle } from "../../../components"
 export function Main () {
 
 return (
-  <main className="py-4 mb-32 flex XS:mb-4 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center">
+  <main className="py-4 mb-32 flex XS:mb-4 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center
+  HD:mb-16">
 
     <div className="main-content max-w-2xl">
-    <Discount discountClass={'mb-4 XS:m-0 XS:mb-8 XS:max-w-[90vw] SM:mb-6 SD:mb-6'} svgUrl={'./sprite.svg#percent'} 
+    <Discount discountClass={`mb-4 XS:m-0 XS:mb-8 XS:max-w-[90vw] SM:mb-6 SD:mb-6 
+    `} svgUrl={'./sprite.svg#percent'} 
     discountTitle={
         <p>
         <span className='text-highlight'>20% </span>
@@ -16,21 +18,22 @@ return (
         </p>
     }/>
     
-    <Text textClass={'max-w-full XS:text-center SM:text-center SD:text-center'}
+    <Text textClass={'max-w-full XS:text-center SM:text-center SD:text-center FHD:min-w-[100vh]'}
       title={
-      <h1 className='text-7xl font-bold XS:text-4xl SM:text-6xl SD:text-6xl'>
+      <h1 className='text-7xl font-bold XS:text-4xl SM:text-6xl SD:text-6xl FHD:text-[8rem]'>
       The Next{" "}
       <span className='text-gradient'> Generation </span>
       Payment method.
       </h1>}
-      subtitle={<p>Our team of experts uses a methodology to 
+      subtitle={<p className="FHD:text-[2rem]">Our team of experts uses a methodology to 
       identify the credit cards most likely to 
       fit your needs. We examine annual percentage rates, annual fees.</p>}/>
-    <ButtonCircle buttonCircleClass={'absolute top-[34%] left-[32%] XS:hidden SM:hidden SD:hidden'} buttonTitle={<p>Get <br/>started</p>}/>   
+    <ButtonCircle buttonCircleClass={`absolute top-[34%] left-[32%] XS:hidden SM:hidden SD:hidden 
+    HD:top-[30%] HD:left-[36%] FHD:top-[35%] FHD:left-[38%]`} buttonTitle={<p className="FHD:text-[2rem]">Get <br/>started</p>}/>   
 
     </div>
 
-    <Image imageClass={'absolute w-[450px] right-0 XS:hidden SM:hidden SD:hidden'} imgUrl={'./robot.webp'}/>
+    <Image imageClass={'absolute w-[450px] right-0 XS:hidden SM:hidden SD:hidden FHD:w-[35%]'} imgUrl={'./robot.webp'}/>
  
 
 

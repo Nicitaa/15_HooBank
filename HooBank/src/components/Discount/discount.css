@@ -22,3 +22,9 @@
 .text-highlight {
   color:#E8E6E3;
 }
+
+@media (min-width:1920px) and (max-width:2559px) {
+  .discount-container {
+    border-radius: 1.6rem;
+  }
+}

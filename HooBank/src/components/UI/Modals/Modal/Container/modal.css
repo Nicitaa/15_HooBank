@@ -46,3 +46,15 @@
   top:5vw;
 }
 }
+
+
+
+@media (min-width:1920px) and (max-width:2559px) {
+  .modal{
+  min-width: 90vh;
+  min-height: 50vh;
+  top:10vh;
+  padding-bottom: 3rem;
+  border-radius: 2rem;
+}
+}
