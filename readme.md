@@ -6,7 +6,16 @@
 
 ```
 git clone https://github.com/Nicitaa/15_HooBank
+```
+
+```
 cd HooBank
+```
+
+```
 npm i
+```
+
+```
 npm run dev
 ```
