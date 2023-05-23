@@ -1,7 +1,17 @@
 # Clone repository
 
 ![alt text](https://i.imgur.com/9KSgjaN.png)
+```
+cd HooBank
+```
 
+```
+npm i
+```
+
+```
+npm run dev
+```
 ## or
 
 ```
