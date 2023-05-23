@@ -1,6 +1,9 @@
 # Clone repository
 
 ![alt text](https://i.imgur.com/9KSgjaN.png)
+```
+cd HooBank
+```
 
 ## Open in IDE (e.g VS Code)
 
