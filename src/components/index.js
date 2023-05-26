@@ -12,8 +12,8 @@ export {Input} from './UI/Input/Input'
 
 
 
-/* Navbar component */
-export {Navbar} from './Navbar/Navbar'
+/* Header component */
+export {Header} from './Header/Header'
 /* Footer component */
 export {Footer} from './Footer/Footer'
 

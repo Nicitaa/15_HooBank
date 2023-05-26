@@ -1,12 +1,12 @@
 import { Routes,Route } from 'react-router-dom'
-import {Navbar,Footer} from './components'
+import {Header,Footer} from './components'
 import { Home,FeaturesPage,ProductPage,ClientsPage } from './pages'
 
 
 const App = () => {
   return (
-    <div className="container px-16 min-w-[100vw] overflow-x-hidden XS:px-4 SM:px-4">
-      <Navbar/>
+    <div className="max-w-[100vw] min-h-[100vh] overflow-x-hidden">
+    <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/features' element={<FeaturesPage/>}/>

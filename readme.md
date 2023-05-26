@@ -1,36 +1,26 @@
+# What inside?
+![HooBank preview](https://i.imgur.com/cXtCz79.jpg)
+Full ass - wrong code - no response
+
 # Clone repository
 
+## Step 1.1 - clone repository (variant 1)
 ![alt text](https://i.imgur.com/9KSgjaN.png)
 
-### Open in IDE (e.g VS Code)
-
-```
-cd HooBank
-```
-
-```
-npm i
-```
-
-```
-npm run dev
-```
-## or
+## or Step 1.1 - clone repository (variant 2)
 
 ```
 git clone https://github.com/Nicitaa/15_HooBank
 ```
 
-### Open in IDE (e.g VS Code)
+## Step 1.2 - install deps
 
 ```
-cd HooBank
+yarn
 ```
 
-```
-npm i
-```
+## Step 1.3 - run project
 
 ```
-npm run dev
+yarn dev -- --port 8000
 ```

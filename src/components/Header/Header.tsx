@@ -1,5 +1,5 @@
-import './navbar.css'
-import {navLinks} from './../../constant/data'
+import './header.css'
+import {navLinks} from '../../constant/data'
 import { useEffect, useRef, useState,CSSProperties } from 'react';
 import { Link } from 'react-router-dom'; 
 import styles from "../../constant/styles";
@@ -9,7 +9,7 @@ import { TapCallback,useSwipeable } from 'react-swipeable';
 import React from 'react';
 
 
-export function Navbar() {
+export function Header() {
 
   const sidebarRef = useRef(null)
 
@@ -106,19 +106,17 @@ export function Navbar() {
 
 
   return (
-    <nav className="flex justify-between py-6 w-full XS:max-h-[10rem] SM:max-h-[10rem] SM:items-center SM:pb-8
-    ">
+    <nav className="px-16 py-6 flex justify-between w-full">
      
      {/* navbar logo */}
      <svg
-      className='w-36 h-14 SM:max-w-[10em] FHD:w-auto FHD:h-auto FHD:max-h-[100%] QHD:max-h-[100%]'>
+      className='4K:max-w-full'>
         <use xlinkHref="./sprite.svg#logo" />
       </svg>
 
 
     {/* navbar-desktop-ul */}
-    <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg XS:hidden SM:hidden SD:hidden
-    FHD:text-[2.5rem]'>
+    <ul className='list-none flex justify-between items-center gap-8 text-gray-600 text-lg 4K:text-4xl'>
       {navLinks.map((navLink) => <Link className='hover:text-gray-500' {...navLink} key={navLink.id}>{navLink.title}</Link>)}
     </ul>
 

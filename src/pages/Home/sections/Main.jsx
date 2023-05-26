@@ -1,16 +1,18 @@
+import './main.css'
 import { Discount,Text,Image,ButtonCircle } from "../../../components"
 
 
 export function Main () {
 
 return (
-  <main className={`py-4 mb-32 flex  XS:mb-4 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center
+  <main className={`px-16 py-4 mb-32 min-h-[87vh] flex
+  4K:px-32 XS:pb-0 SM:mb-0 SM:pb-0 SD:pt-0 SD:mb-2 SD:justify-center
   HD:mb-16 QHD:mb-8`}>
 
     <div className="main-content max-w-2xl">
-    <Discount discountClass={`mb-4 XS:m-0 XS:mb-8 XS:max-w-[90vw] SM:mb-6 SD:mb-6 
+    <Discount discountClass={`mb-4 XS:mb-8 XS:max-w-[90vw] SM:mb-6 SD:mb-6 
     `} svgUrl={'./sprite.svg#percent'} 
-    discountTitle={<p>
+    discountTitle={<p className='text-4xl'>
       <span className='text-highlight'>20% </span>
       Discount For{" "}
       <span className='text-highlight'>1 Months </span>
@@ -28,7 +30,7 @@ return (
       identify the credit cards most likely to 
       fit your needs. We examine annual percentage rates, annual fees.</p>}/>
     <ButtonCircle buttonCircleClass={`absolute top-[34%] left-[32%] XS:hidden SM:hidden SD:hidden 
-    HD:top-[30%] HD:left-[36%] FHD:top-[35%] FHD:left-[38%]`} buttonTitle={<p className="FHD:text-[2rem]">Get <br/>started</p>}/>   
+    HD:top-[30%] HD:left-[36%] FHD:top-[10%] FHD:left-[105%]`} buttonTitle={<p className="FHD:text-[2rem]">Get <br/>started</p>}/>   
 
     </div>
 
