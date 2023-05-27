@@ -1,6 +1,6 @@
 # What inside?
-![work in progress](https://i.imgur.com/2hHq62J.jpg)
-
+![HooBank preview](https://i.imgur.com/hT1QmhX.jpg)
+Full ass - wrong code - no responsive
 
 # Clone repository
 
@@ -10,7 +10,7 @@
 ## or Step 1.1 - clone repository (variant 2)
 
 ```
-git clone https://github.com/Nicitaa
+git clone https://github.com/Nicitaa/15_HooBank
 ```
 
 ## Step 1.2 - install deps
