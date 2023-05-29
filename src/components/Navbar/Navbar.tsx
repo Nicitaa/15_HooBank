@@ -75,18 +75,30 @@ if (delta !== null) {
 
 
 return (
-<nav className="px-4 py-4 flex justify-between items-center 4K:px-12 4K:py-8">
+<nav className="px-4 py-4 flex justify-between items-center 
+Tablet:px-8
+Laptop:px-12
+LaptopL:px-16
+4K:px-32      4K:py-12">
 
-  {/* Logo */}
-    <svg className='w-24 h-10 MobileL:w-28 MobileL:h-12 Tablet:w-36 Tablet:h-16 LaptopL:w-44 LaptopL:h-22
-    4K:w-72 4K:h-28'>
+  {/* Navbar Logo */}
+    <svg className='w-32 h-14
+    MobileM:w-40  MobileM:h-16
+    MobileL:w-42  MobileL:h-18
+    Tablet:w-36   Tablet:h-16
+    Laptop:w-48   Laptop:h-24
+    LaptopL:w-56  LaptopL:h-22
+    4K:w-96       4K:h-32'>
      <use xlinkHref='./sprite.svg#logo'/>
     </svg>
 
 
   {/* Navbar Links */}
-  <ul className="hidden text-white Tablet:flex Tablet:justify-between Tablet:gap-6 LaptopL:text-lg 4K:text-3xl
-  4K:gap-12">
+  <ul className="hidden text-white justify-between gap-6
+  Tablet:flex
+  Laptop:text-2xl
+  LaptopL:text-3xl LaptopL:gap-8
+  4K:text-5xl 4K:gap-16">
     {navLinks.map(navLink => (
      <NavLink to={navLink.to} key={navLink.id}>{navLink.title}</NavLink>	  
 	 ))}
@@ -96,7 +108,11 @@ return (
   {/* Hamburger menu */}
   <div>
     <motion.svg 
-    className='w-6 h-6 fill-white MobileL:w-8 MobileL:h-8 Tablet:hidden'
+    className='w-6 h-6 fill-white 
+    MobileS:w-8 MobileS:h-8 
+    MobileM:w-9 MobileM:h-9 
+    MobileL:w-10 MobileL:h-10 
+    Tablet:hidden'
     animate={{rotate: svgRotate ? 180 : 0}}
     onClick={() => showMobileSidebar()}>
       <use xlinkHref='./sprite.svg#menu-expand'/>
@@ -105,20 +121,25 @@ return (
 
     {hamburgerMenu.isOpen && 
    
-        <div className={`fixed bg-black/[0.6] top-0 right-0 left-0 bottom-0`}  onClick={() => hideSidebar()}
+        <div className={`fixed bg-black/[0.6] top-0 right-0 left-0 bottom-0 z-[99]`}  onClick={() => hideSidebar()}
       {...handlers} 
       >
       
       <motion.div className={`fixed top-0 bottom-0 left-0 
-      flex px-4 py-2 linear-bg-gray
+      flex px-6 py-2 linear-bg-gray
+      MobileM:px-10
+      MobileL:px-12
       !left-[-${delta}px]`} ref={sidebarRef}
       animate={{x:[-150,0]}}
       transition={{duration:0.4}} 
       style={sidebarStyle}>
-        <ul className="flex flex-col justify-center gap-2" onClick={e => e.stopPropagation()}>
+        <ul className="flex flex-col pt-12 gap-6" onClick={e => e.stopPropagation()}>
         {navLinks.map(navLink => (
      <li>
-      <NavLink className='linear-border-b-gray' to={navLink.to} key={navLink.id}>{navLink.title}</NavLink>
+      <NavLink className='linear-border-b-gray text-2xl
+      MobileM:text-3xl
+      MobileL:text-4xl'
+       to={navLink.to} key={navLink.id}>{navLink.title}</NavLink>
       </li>
      ))}
         </ul>
