@@ -2,10 +2,12 @@ interface InputProps {
   placeholder?:string
   label:string
   value:string
-  onChange:(value:string) => void
+  onChange:(e:string) => void
 }
 
 export function Input ({placeholder,label,value,onChange}:InputProps) {
+  
+
 return (
  <div className="relative">
   <label className="text-sm absolute top-[-55%] left-[2%]">{label}</label>

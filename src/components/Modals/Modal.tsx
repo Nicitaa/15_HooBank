@@ -7,7 +7,7 @@ interface ModalProps {
 
 export function Modal ({label,children}:ModalProps) {
 return (
-<modal className={`fixed top-0 bottom-0 left-0 right-0 bg-black/[0.4]`}>
+<div className={`fixed top-0 bottom-0 left-0 right-0 bg-black/[0.4]`}>
   <form className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]
   w-3/4 h-3/4
   rounded-xl linear-bg-gray flex flex-col items-center"
@@ -19,6 +19,6 @@ return (
        {children}
       </Container>
   </form>
-</modal>
+</div>
 )
 }

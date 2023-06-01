@@ -7,27 +7,26 @@ export default {
   theme: {
     extend: {
       screens: {
-        
         'MobileS': {'min': '320px'},
-        // => @media (min-width: 3840px) { ... }
+        // => @media (min-width: 320px) { ... }
 
         'MobileM': {'min': '375px'},
-        // => @media (min-width: 2560px and max-width: 3839px) { ... }
+        // => @media (min-width: 375px) { ... }
         
         'MobileL': {'min': '425px'},
-        // => @media (min-width: 1920px and max-width: 2559px) { ... }
+        // => @media (min-width: 425px) { ... }
 
         'Tablet': {'min': '768px'},
-        // => @media (min-width: 1280px and max-width: 1919px) { ... }
+        // => @media (min-width: 768px) { ... }
 
         'Laptop': {'min': '1024px'},
-        // => @media (min-width: 720px and max-width: 1279px) { ... }
+        // => @media (min-width: 1024px) { ... }
 
         'LaptopL': {'min': '1440px'},
-        // => @media (min-width: 360px and max-width: 719px) { ... }
+        // => @media (min-width: 1440px) { ... }
 
         '4K': {'min': '2560px',},
-        // => @media (min-width: 1px and max-width: 359px) { ... }
+        // => @media (min-width: 2560px) { ... }
       },
     },
   },

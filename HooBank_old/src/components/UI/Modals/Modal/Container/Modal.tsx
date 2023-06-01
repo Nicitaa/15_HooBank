@@ -17,7 +17,7 @@ export function Modal ({closeModal,children,modalTitle}:IModalProps) {
 
 
 
- /* for e.stopPropagation when mousedown on modal and mouseup on modalBg */
+ /* for e.stopPropagation when mousedown on modal and mouseup on modalBg - start */
  const modalBgHandler = useSwipeable({
   onTouchStartOrOnMouseDown: (e) => {
     console.log('mouse down',e)
@@ -32,6 +32,7 @@ const modalHandler = useSwipeable({
   },
   trackMouse: true
 })
+ /* for e.stopPropagation when mousedown on modal and mouseup on modalBg - end */
 
  
 return (
