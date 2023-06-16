@@ -1,4 +1,3 @@
-
 import { CTA, Companys, Features, Feedbacks, Main, Numbers } from "./sections";
 
 

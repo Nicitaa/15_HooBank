@@ -19,8 +19,6 @@ return (
   Laptop:p-[3.5rem]  Laptop:text-xl
   LaptopL:p-[6rem]   LaptopL:text-3xl
   4K:p-[11rem]       4K:text-7xl
-  
-  
   "
   label="Get started"/>
   </div>

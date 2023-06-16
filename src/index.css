@@ -4,10 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* 3 colors rule 60/30/10 */
+:root {
+  /* text */
+  --text-title:rgba(244,244,244,1);
+  --text-subTitle:rgba(164, 156, 142, 0.7);
+  /* --text-cta - chek .text-gradient */
+  /* bg */
+  --primary-bg:rgba(0, 3, 12,1);
+  /* --secondary-bg - check .card-bg */
+  /* --cta-bg - check .button-bg */
+}
+
+
 body {
   min-height: -webkit-fill-available;
   background-color:rgba(0, 3, 12,1);
   font-family: 'Open Sans',sans-serif;
+
+}
+
+body::-webkit-scrollbar { 
+  display: none; 
 }
 
 #root {
@@ -15,10 +34,12 @@ body {
   flex-flow: column;
   margin-top: auto;
   min-height: 100vh;
+
 }
 
 html {
   height:-webkit-fill-available;
+
 }
 
 
@@ -79,10 +100,33 @@ html {
   background:linear-gradient(52deg, rgba(10, 62, 64, 1) 0%, rgba(22, 138, 142, 1) 50%, rgba(39, 148, 164, 1) 100%);
 }
 
+.modal-width {
+  width: max(260px,80%);
+}
+
 .card-bg {
   background: linear-gradient(-168.39deg, rgb(24, 26, 27) -278.56%, rgb(82, 89, 92) -78.47%, rgb(14, 13, 23) 91.61%);
 }
 
+.message-bg {
+  /* ff 3.6+ */
+  background:-moz-linear-gradient(27deg, rgba(56, 56, 56, 1) 0%, rgba(10, 0, 33, 1) 100%); 
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(27deg, rgba(56, 56, 56, 1) 0%, rgba(10, 0, 33, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-linear-gradient(27deg, rgba(56, 56, 56, 1) 0%, rgba(10, 0, 33, 1) 100%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#0A0021', GradientType=1 );
+
+  /* ie 10+ */
+  background:-ms-linear-gradient(27deg, rgba(56, 56, 56, 1) 0%, rgba(10, 0, 33, 1) 100%);
+
+  /* global 94%+ browsers support */
+  background:linear-gradient(27deg, rgba(56, 56, 56, 1) 0%, rgba(10, 0, 33, 1) 100%);
+}
 
 
 
@@ -131,9 +175,17 @@ html {
 
 
 
+.footer-link:hover {
+  color:rgba(112, 107, 97, 0.7);
+}
 
 
 
+
+
+
+
+/* glare relative overflow-x-hidden requires */
 .glare {
   position: absolute;
   width: 60%;
@@ -152,15 +204,8 @@ html {
 }
 
 .glare-red {
-  background: -moz-linear-gradient(
+  background: linear-gradient(
     0deg,
     rgba(31, 17, 206, 0) 0%,
     rgba(229, 43, 43, 1) 100%);
 }
-
-
-
-
-
-
-

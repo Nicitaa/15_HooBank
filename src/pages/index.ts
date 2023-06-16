@@ -1,2 +1,5 @@
-export {HomePage} from './Home/HomePage'
-export {ContactPage} from './Contact/ContactPage'
+export { HomePage } from './Home/HomePage'
+export { AboutUsPage } from './AboutUs/AboutUsPage'
+export { FeaturesPage } from './Features/FeaturesPage'
+export { SolutionPage } from './Solution/SolutionPage'
+export { Error404Page } from './Error404/Error404Page'

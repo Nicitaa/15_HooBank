@@ -6,7 +6,7 @@ export const navLinks = [
   },
   {
     id:'about',
-    to:'/about',
+    to:'/about-us',
     title:'About Us'
   },
   {
@@ -111,7 +111,7 @@ export const socialLinks = [
 
 
 
-export const numbers = [
+export const numberItems = [
   {
     number:'3800+',
     label:'User active'

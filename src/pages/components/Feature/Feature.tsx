@@ -1,5 +1,5 @@
-import { Container } from '../../components'
-import { Text } from './../components'
+import { Container } from '../../../components'
+import { Text } from '..'
 
 
 interface FeatureProps {
@@ -12,7 +12,7 @@ interface FeatureProps {
 
 export function Feature ({className,children,childrenText,title,subTitle}:FeatureProps) {
 return (
-<Container className={`flex flex-col items-center gap-4 
+<Container className={`flex flex-col items-center gap-4
 Tablet:flex-row Tablet:gap-6
 Laptop:gap-8
 LaptopL:gap-10

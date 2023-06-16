@@ -37,18 +37,20 @@ return (
     <div className='flex justify-around flex-wrap gap-4 pb-4
     MobileL:flex-nowrap MobileL:px-4
     LaptopL:w-3/4'>
-      {footerLinks.map((section) => (
+      {footerLinks.map(section => (
           <div className='w-full' key={section.title}>
             <h1 className='title font-bold text-xl text-center mb-2 
             Laptop:text-2xl
             LaptopL:text-4xl
             4K:text-7xl 4K:pb-4 4K:pt-8'>{section.title}</h1>
-            <ul className=' subTitle flex flex-col text-center
+            <ul className='subTitle flex flex-col text-center
             Laptop:text-xl
             LaptopL:text-3xl
             4K:text-6xl'>
             {section.links.map(link => (
-              <Link className='leading-8 LaptopL:leading-10 4K:leading-normal' to={link.link} key={link.name}>{link.name}</Link>
+              <li  key={link.name}><Link className='footer-link leading-8 LaptopL:leading-10 4K:leading-normal' to={link.link}>
+                {link.name}</Link>
+              </li>
             ))}
             </ul>
           </div>

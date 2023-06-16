@@ -5,7 +5,7 @@ interface NumberProps {
 
 export function Number ({number,label}:NumberProps) {
 return (
-<div className='flex items-center justify-center'>
+<div className='flex items-center justify-center text-white'>
   <p className="pr-1 text-2xl font-bold
   Tablet:text-xl
   Laptop:text-3xl

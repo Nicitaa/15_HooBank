@@ -1,5 +1,5 @@
 import { navLinks } from "../../constant";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useHamburgerMenu from "../../hooks/useHamburgerMenu";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { TapCallback, useSwipeable } from "react-swipeable";
@@ -74,6 +74,9 @@ if (delta !== null) {
 /* for sidebar swiping - end */
 
 
+const navigate = useNavigate()
+
+
 return (
 <nav className="px-4 py-4 flex justify-between items-center 
 Tablet:px-8
@@ -88,7 +91,8 @@ LaptopL:px-16
     Tablet:w-36   Tablet:h-16
     Laptop:w-48   Laptop:h-24
     LaptopL:w-56  LaptopL:h-22
-    4K:w-96       4K:h-32'>
+    4K:w-96       4K:h-32'
+    onClick={() => navigate("/")}>
      <use xlinkHref='./sprite.svg#logo'/>
     </svg>
 
@@ -135,7 +139,7 @@ LaptopL:px-16
       style={sidebarStyle}>
         <ul className="flex flex-col pt-12 gap-6" onClick={e => e.stopPropagation()}>
         {navLinks.map(navLink => (
-     <li>
+     <li key={navLink.id}>
       <NavLink className='linear-border-b-gray text-2xl
       MobileM:text-3xl
       MobileL:text-4xl'

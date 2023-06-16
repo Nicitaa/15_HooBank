@@ -1,29 +1,30 @@
-import { Container } from "../../../components";
-import { numbers } from "../../../constant";
-import { Number } from '../../components'
+import { useContext } from 'react'
 
-type NumbersType = {
+import { Number } from '../../components'
+import { Container } from "../../../components"
+import { NumbersContext } from "../../../context"
+
+
+type NumberItemTypes = {
   number:string
   label:string
 }
 
-const defaultArr: NumbersType[] = numbers
-
 export function Numbers () {
 
-  const myStorage = localStorage.getItem("numbers")
+  const {numberItemsState} = useContext(NumbersContext)
 
-  const numbersarr:NumbersType[] =  myStorage ? JSON.parse(myStorage) : defaultArr
+  const numberItemsStorage = localStorage.getItem("numberItems")
 
-
+  const numberItems:NumberItemTypes[] =  numberItemsStorage ? JSON.parse(numberItemsStorage) : numberItemsState
 
 return (
 <Container>
   <div className="flex flex-col flex-wrap justify-around gap-4 Tablet:flex-row">
   
-  {numbersarr.map((number) => (
-     <Number number={number.number} label={number.label} key={number.label}/>
-  ))}
+    {numberItems.map((numberItem) => (
+      <Number number={numberItem.number} label={numberItem.label} key={numberItem.label}/>
+    ))}
    
   </div>
 </Container>

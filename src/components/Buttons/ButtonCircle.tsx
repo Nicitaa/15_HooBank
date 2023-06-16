@@ -7,7 +7,7 @@ interface ButtonCircleProps {
 
 export function ButtonCircle ({label,className}:ButtonCircleProps) {
 return (
-  <motion.button className={`
+  <motion.button className={`text-white
   w-8 h-8 p-12
   hidden Tablet:flex
   rounded-full justify-center items-center 

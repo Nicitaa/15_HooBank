@@ -5,7 +5,7 @@ import { Feedback } from "../../components/";
 
 export function Feedbacks () {
 return (
- <Container className="flex flex-col gap-4 4K:gap-16">
+ <Container className="relative overflow-x-hidden flex flex-col gap-4 4K:gap-16">
   <div className="flex flex-col gap-4 text-center">
       <h1 className="title text-2xl font-bold
       LaptopL:text-5xl
@@ -28,7 +28,10 @@ return (
   ))}
   </div>
 
-{/* <Glare glareClass={'glare-purple glare-right'}/> fix glare position absolute bug */}   
+  <div className='glare glare-red left-[-80%] top-[50%]
+  Tablet:left-[-65%] 
+  LaptopL:left-[-58%] LaptopL:top-[40%]
+  4K:hidden'/> 
  </Container> 
 )
 }

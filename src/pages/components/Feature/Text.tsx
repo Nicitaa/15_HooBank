@@ -6,7 +6,7 @@ interface TextProps {
 
 export function Text ({title,subTitle,children}:TextProps) {
 return (
-<div className="flex flex-col items-center Tablet:items-start Tablet:gap-2 4K:gap-12">
+<div className="flex flex-col items-center gap-y-2 Tablet:items-start 4K:gap-12">
   <div className="text-center mb-2 MobileL:mb-4 Tablet:text-start">
   <h1 className="title text-2xl font-bold mb-2
   MobileL:text-3xl

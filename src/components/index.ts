@@ -9,9 +9,9 @@ import {Input} from './Inputs/Input'
 
 import {Container} from './Container'
 
-import {Modal} from './Modals/Modal'
+import {ModalContainer} from './Modals/ModalContainer'
 import {AdminModal} from './Modals/AdminModal'
 
 export {Navbar,Footer,Button,ButtonCircle,Container,DownloadButton,
-  Modal,AdminModal,Input
+  ModalContainer,AdminModal,Input
 }

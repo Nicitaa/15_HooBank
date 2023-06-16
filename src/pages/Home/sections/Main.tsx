@@ -2,7 +2,7 @@ import { Discount, MainText } from "../../components";
 
 export function Main () {
 return (
-<div className="flex">
+<div className="relative overflow-x-hidden flex">
 
 {/* Main  */}
  <div className="flex">
@@ -16,11 +16,11 @@ return (
   <img className="hidden max-w-[40%] object-cover Tablet:block" src="./robot.webp" alt="robot" />
  </div>
 
-  {/* 
-  Fix glare position:absolute bug
-  <div className='glare glare-blue left-[-50%]'/>
-  <div className='glare glare-blue right-[-50%]'/> 
-  */}
+  
+  
+  <div className='glare glare-blue left-[-60%]'/>
+  <div className='glare glare-blue right-[-50%] top-[20%]'/> 
+ 
 </div>
 )
 }
