@@ -11,7 +11,7 @@
 ## or Step 1.1 - clone repository (variant 2)
 
 ```
-git clone https://github.com/Nicitaa
+git clone https://github.com/Nicitaa/15_HooBank
 ```
 
 ## Step 1.2 - install deps
@@ -23,5 +23,5 @@ yarn
 ## Step 1.3 - run project
 
 ```
-yarn dev -- --port 8000
+yarn dev
 ```
