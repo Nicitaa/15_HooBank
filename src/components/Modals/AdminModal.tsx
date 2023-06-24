@@ -11,7 +11,7 @@ export function AdminModal() {
   const message = useMessage()
 
   const { numberItemsState, setNumberItemsState } = useContext(NumbersContext)
-  const [inputValues, setInputValues] = useState<string[]>(["","",""]) //initial value for controlled inputs
+  const [inputValues, setInputValues] = useState<string[]>([]) //initial value for controlled inputs
 
   
   
@@ -22,28 +22,34 @@ export function AdminModal() {
   }
 
   function handleChange() {
+    if (
+      !numberItemsState 
+      || numberItemsState.length === 0 
+      || inputValues.every(inputValue => inputValue.length === 0)
+      ) {
+    message.show('error')
+      return (
+        <>
+        <ModalContainer label="Admin panel" onClose={adminModal.onClose} isOpen={adminModal.isOpen}>
+          <div>No numbers available.</div>
+        </ModalContainer>
+        </>
+      )
+    }
+    
+
     const updatedNumbers = numberItemsState.map((numberItemState, index) => ({
       ...numberItemState,
-      number: inputValues[index],
+      number: inputValues[index].length === 0 ? numberItemState.number : inputValues[index],
     }))
+   
+    
     setNumberItemsState(updatedNumbers)
     localStorage.setItem("numberItems", JSON.stringify(updatedNumbers))
-    // message.showMessage('success')
-    message.setStatus(false,true) //success
-    message.showMessage()
+    message.show('success')
   }
 
-  if (!numberItemsState || numberItemsState.length === 0) {
-    message.setStatus(true,false) //error
-    message.showMessage()
-    return (
-      <>
-      <ModalContainer label="Admin panel" onClose={adminModal.onClose} isOpen={adminModal.isOpen}>
-        <div>No numbers available.</div>
-      </ModalContainer>
-      </>
-    );
-  }
+  
 
   return (
     <ModalContainer label="Admin panel" onClose={adminModal.onClose} isOpen={adminModal.isOpen}>

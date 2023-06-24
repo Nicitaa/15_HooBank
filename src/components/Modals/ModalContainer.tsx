@@ -3,7 +3,6 @@ import { Container } from ".."
 import { IoMdClose } from "react-icons/io"
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { gsap } from 'gsap'
 import useMessage from "../../hooks/useMessage"
 import { Message } from "./Message"
 
@@ -80,7 +79,7 @@ return (
           <Container className="flex items-center justify-between p-4 w-full border-b-[1px] border-solid border-[#3F3E45]
           Tablet:justify-end
           LaptopL:px-8 LaptopL:py-8
-          4K:py-20 4K:border-4">
+          4K:py-20 4K:border-b-4">
             <h1 className="text-xl text-[#cdcdcd]
             Tablet:absolute Tablet:left-1/2 Tablet:-translate-x-1/2
             LaptopL:text-4xl
@@ -99,9 +98,11 @@ return (
           {children}
           </Container>
       </motion.form>
-      {message.isOpen && <Message />}
     </motion.div>
   }
+  <AnimatePresence>
+    {message.isOpen && <Message />}
+  </AnimatePresence>
   </AnimatePresence>
 )
 }
