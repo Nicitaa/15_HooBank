@@ -20,3 +20,4 @@ React + Vite + TS SWC + Tailwind
 Responsive
 change .css file to make changes across all site
 add some tailwind to make changes only for one element
+v.0.1.0.0

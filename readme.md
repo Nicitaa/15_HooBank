@@ -1,10 +1,11 @@
 # What inside?
-![work in progress](https://i.imgur.com/2hHq62J.jpg)
 
+![HooBank](https://i.imgur.com/SoO5bQs.png)
 
 # Clone repository
 
 ## Step 1.1 - clone repository (variant 1)
+
 ![alt text](https://i.imgur.com/9KSgjaN.png)
 
 ## or Step 1.1 - clone repository (variant 2)
