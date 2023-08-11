@@ -18,7 +18,7 @@ add some tailwind to make changes only for one element
 
 
 INFO:
-React + Vite + TS SWC + Tailwind
+React TS SWC + Vite + Tailwind
 Responsive
 v.0.1.0.0
 Materials:

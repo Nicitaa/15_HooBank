@@ -11,7 +11,11 @@ export function AdminModal() {
   const message = useMessage()
 
   const { numberItemsState, setNumberItemsState } = useContext(NumbersContext)
-  const [inputValues, setInputValues] = useState<string[]>(["", "", ""]) //initial value for controlled inputs
+  const [inputValues, setInputValues] = useState<string[]>(Array(3)
+    .fill("")
+    .map(() => {
+      return ("")
+    }))
 
 
 
